@@ -1,26 +1,33 @@
 import Title from "./components/Title"
 import InputBlock from "./components/InputBlock"
 import Button from "./components/Button"
-import {useState} from 'react'
+import {useState} from 'react';
+import {decoderEn, decoderEnBack, decoderRus, decoderRusBack} from './scripts/decoder'
 
-function App() {
+const App = () => {
   const [message, setMessage] = useState('');
-  const handleChange = (event) => {
+
+  const handleChange = event => {
     setMessage(event.target.value);
 
     console.log('value is:', event.target.value);
   };
 
   return (
-    <div id="align-container">
-      <div id="main-container">
-        <Title text={'Morse Decoder'}/>
-        <InputBlock placeholder={'Enter text'} />
-        <Button text={'Submit'}/>
-        <InputBlock placeholder={'Morse code'} />
-      </div>
-    </div>
-  )
-}
+    <div>
+      <input
+        type="text"
+        id="message"
+        name="message"
+        onChange={handleChange}
+        value={message}
+      />
 
-export default App
+      <h2>Message: {decoderRus(message)}</h2>
+    </div>
+  );
+};
+
+
+
+export default App;
