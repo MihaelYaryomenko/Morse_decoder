@@ -1,5 +1,5 @@
 import Title from "./components/Title"
-import InputBlock from "./components/InputBlock"
+import Input from "./components/InputBlock"
 import Button from "./components/Button"
 import {useState} from 'react';
 import {decoderEn, decoderEnBack, decoderRus, decoderRusBack} from './scripts/decoder'
@@ -15,15 +15,21 @@ const App = () => {
 
   return (
     <div>
+      <div id="align-container">
+        <div id="main-container">
+          <Title />
+        </div>
       <input
+        className="text-container"
         type="text"
         id="message"
         name="message"
         onChange={handleChange}
         value={message}
-      />
+      />  
 
       <h2>Message: {decoderRus(message)}</h2>
+      </div>
     </div>
   );
 };
