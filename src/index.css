@@ -85,6 +85,13 @@ textarea {
   display: block;
   width: 32px;
   height: 32px;
+}
+
+.flag-ru:before {
+  background-image: url(https://flagsapi.com/RU/shiny/32.png);
+}
+
+.flag-us:before {
   background-image: url(https://flagsapi.com/US/shiny/32.png);
 }
 
