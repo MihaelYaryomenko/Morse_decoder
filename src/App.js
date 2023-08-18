@@ -27,7 +27,7 @@ const changeToRussian = () => {
   selectedLanguageMenu.textContent = contentOfListElementRus
   selectedLanguageMenu.classList.replace('flag-us','flag-ru');
   language = 'russian'
-  console.log(language)
+
 }
 
 const changeToEnglish = () => {
@@ -36,7 +36,6 @@ const changeToEnglish = () => {
   selectedLanguageMenu.textContent = contentOfListElementEn
   selectedLanguageMenu.classList.replace('flag-ru','flag-us');
   language = 'english'
-  console.log(language)
 }
 
 const App = () => {
