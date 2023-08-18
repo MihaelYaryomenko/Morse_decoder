@@ -54,7 +54,6 @@ const decoderFunc = {
       const container = [];
       for (let i = 0; i < buffer.length; i++) {
          const indexOfLetter = lettersEn.findIndex((element) => element === buffer[i])
-         console.log(lettersEn.findIndex((element) => element === buffer[i]))
          if (indexOfLetter !== -1) {
             container.push(morseCodeEn[indexOfLetter])
          }
@@ -66,7 +65,6 @@ const decoderFunc = {
       const container = [];
       for (let i = 0; i < buffer.length; i++) {
          const indexOfLetter = morseCodeEn.findIndex((element) => element === buffer[i])
-         console.log(morseCodeEn.findIndex((element) => element === buffer[i]))
          if (indexOfLetter !== -1) {
             container.push(lettersEn[indexOfLetter])
          }
